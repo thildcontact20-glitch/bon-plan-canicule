@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon Plan Canicule - Restez au frais !</title>
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card: #141820;
+            --accent: #00d4aa;
+            --accent2: #f59e0b;
+            --text: #e8edf2;
+            --muted: #8892a0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0b0e14 0%, #1a2332 50%, #0d3b2e 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,212,170,0.15);
+        }
+        .hero h1 { font-size: 2.5em; color: var(--accent); margin-bottom: 8px; }
+        .hero .heat { color: var(--accent2); font-size: 1.3em; }
+        .hero p { color: var(--muted); font-size: 1.1em; margin-top: 12px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 30px 16px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 20px;
+            transition: transform 0.2s, border-color 0.2s;
+            position: relative;
+        }
+        .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+        .card .badge {
+            position: absolute; top: 12px; right: 12px;
+            background: var(--accent2); color: #000;
+            font-size: 0.75em; font-weight: 700;
+            padding: 3px 10px; border-radius: 20px;
+        }
+        .card h3 { font-size: 1.1em; margin: 12px 0 6px; }
+        .card .price { font-size: 1.3em; color: var(--accent); font-weight: 700; }
+        .card .desc { color: var(--muted); font-size: 0.9em; margin: 8px 0 14px; line-height: 1.5; }
+        .card .btn {
+            display: inline-block;
+            background: var(--accent); color: #000; font-weight: 600;
+            padding: 10px 20px; border-radius: 8px; text-decoration: none;
+            transition: 0.2s;
+        }
+        .card .btn:hover { background: #00e8ba; transform: scale(1.03); }
+        .section-title {
+            font-size: 1.5em; margin: 40px 0 20px;
+            padding-left: 12px; border-left: 4px solid var(--accent);
+        }
+        .alert {
+            background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3);
+            border-radius: 12px; padding: 16px 20px; margin: 20px 0;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .alert .icon { font-size: 1.5em; }
+        .footer { text-align: center; padding: 30px; color: var(--muted); font-size: 0.85em; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🔥 Bon Plan Canicule</h1>
+    <div class="heat">France — 40°C annoncés</div>
+    <p>Les meilleurs équipements pour survivre à la chaleur. Livraison rapide.</p>
+</div>
+
+<div class="container">
+
+<div class="alert">
+    <span class="icon">⚠️</span>
+    <span><strong>Canicule exceptionnelle</strong> — Les stocks partent vite. Commandez maintenant.</span>
+</div>
+
+<h2 class="section-title">❄️ Climatiseurs & Ventilateurs</h2>
+<div class="grid">
+    <div class="card">
+        <span class="badge">Meilleure vente</span>
+        <h3>Climatiseur Mobile 12000 BTU</h3>
+        <div class="price">349,99 €</div>
+        <div class="desc">Rafraîchit jusqu'à 35m². Silencieux, télécommande, programmable.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+    <div class="card">
+        <h3>Ventilateur sur Colonne 45cm</h3>
+        <div class="price">49,99 €</div>
+        <div class="desc">Oscillation 90°, 3 vitesses, télécommande. Ultra silencieux.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+    <div class="card">
+        <h3>Rafraîchisseur d'Air Évaporatif</h3>
+        <div class="price">89,99 €</div>
+        <div class="desc">3-en-1 : ventilateur + humidificateur + rafraîchisseur. Réservoir 5L.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+</div>
+
+<h2 class="section-title">🌊 Piscines & Spa</h2>
+<div class="grid">
+    <div class="card">
+        <span class="badge">-30%</span>
+        <h3>Piscine Tubulaire 366x122cm</h3>
+        <div class="price">299,99 €</div>
+        <div class="desc">Piscine INTEX. 10.5m³. Filtration incluse. Montage rapide 45min.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+</div>
+
+<h2 class="section-title">🧊 Hydratation & Fraîcheur</h2>
+<div class="grid">
+    <div class="card">
+        <h3>Bouteille Isotherme 1L</h3>
+        <div class="price">24,99 €</div>
+        <div class="desc">Garde l'eau fraîche 24h. Acier inoxydable, double paroi.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+    <div class="card">
+        <h3>Machine à Glaçons Portable</h3>
+        <div class="price">119,99 €</div>
+        <div class="desc">12kg de glaçons/jour. Prête en 6 minutes. Silencieuse.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+</div>
+
+<h2 class="section-title">🌙 Pour Dormir au Frais</h2>
+<div class="grid">
+    <div class="card">
+        <h3>Oreiller Rafraîchissant Gel</h3>
+        <div class="price">34,99 €</div>
+        <div class="desc">Technologie gel rafraîchissant. Mousse à mémoire de forme.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+    <div class="card">
+        <h3>Draps en Bambou Frais</h3>
+        <div class="price">42,99 €</div>
+        <div class="desc">100% bambou. Ultra respirant, anti-bactérien.</div>
+        <a class="btn" href="#" target="_blank">Voir sur Amazon →</a>
+    </div>
+</div>
+
+</div>
+
+<div class="footer">
+    <p>Bon Plan Canicule — Liens partenaires Amazon.</p>
+    <p>© 2026 Vivalys Compagny</p>
+</div>
+
+</body>
+</html>
